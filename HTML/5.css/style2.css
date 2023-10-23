@@ -1,0 +1,17 @@
+h3 {
+    background-color: papayawhip;
+    color: pink;
+    border-top: 5px solid fuchsia;
+    border-left: 5px dashed fuchsia;
+    border-right: 5px dashed fuchsia;
+    border-bottom: 5px double fuchsia;
+    margin: 50px;
+    padding: 5%;
+    background-image: url('../images/calendar_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+li {
+    color: peru;
+    margin: 0 50px;
+}

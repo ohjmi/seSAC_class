@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>입력폼 만들기</h1>
+        <p>
+            <label>아이디</label>
+            <input type="text" placeholder="아이디를 입력하시오"> <br>
+            <label>비밀번호</label>
+            <input type="password" placeholder="비밀번호를 입력하시오"> <br>
+            <label>Capcha</label>
+            <input type="number" placeholder="숫자를 입력하시오"> <br>
+            <input type="button" value="로그인">
+        </p>
+        <h2>선택박스</h2>
+        <p>
+            과목 고르기
+            <input type="radio" name="subject" value="국어">국어
+            <input type="radio" name="subject" value="영어">영어
+            <input type="radio" name="subject" value="수학">수학
+        </p>
+        <p>
+            과일 고르기
+            <input type="radio" name="fruit" value="option1">딸기
+            <input type="radio" name="fruit" value="option2">사과
+            <input type="radio" name="fruit" value="option3">수박
+        </p>
+        <input type="checkbox" name="food" value="f1">돈까스
+        <input type="checkbox" name="food" value="f2">떡볶이
+        <input type="checkbox" name="food" value="f3">김밥
+        <p>
+            풀다운 메뉴(1개 선택)
+            <select size="3">
+                <option>콜라</option>
+                <option>사이다</option>
+                <option>환타</option>
+                <option>환타</option>
+                <option>환타</option>
+            </select>
+        </p>
+        <p>
+            풀다운 메뉴(n개 선택-ctrl)
+            <select size="5" multiple>
+                <option>콜라</option>
+                <option>사이다</option>
+                <option>환타</option>
+                <option>밀키스</option>
+                <option>쥬스</option>
+                <option>쥬스</option>
+                <option>쥬스</option>
+            </select>
+        </p>
+        <h2>프로그래스바</h2>
+        <progress value="60" max="100">60%</progress>
+    </body>
+</html>

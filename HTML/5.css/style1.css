@@ -1,0 +1,25 @@
+h1, h4 {
+    margin: 50px;
+}
+p.myclass1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-style: oblique;
+    color: red;
+    width: 600px;
+    height: 50px;
+    background-color: yellow;
+    border: 5px dashed red;
+    margin: 50px;
+}
+p.myclass2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-style: oblique;
+    color: palevioletred;
+    width: 600px;
+    height: 50px;
+    background-color: powderblue;
+    border: 5px solid palevioletred;
+    margin: 50px;
+}

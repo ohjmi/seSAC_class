@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .bg {
+                height: 300px;
+                background-color: palevioletred;
+            }
+            .center {
+                background-color: pink;
+            }
+            .fixed {
+                width: 80px;
+                height: 80px;
+                background-color: powderblue;
+                background-image: url('../images/customer.png');
+                background-repeat: no-repeat;
+                background-size: 80px;
+                border-radius: 25px;
+                position: fixed;
+                bottom: 50px;
+                right: 50px;
+                /* display: none; */
+            }
+            #absolute {
+                width: 100px;
+                height: 100px;
+                background-image: url('https://t1.daumcdn.net/thumb/R720x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/P9h/image/sR7PN1eZ70y5YgfR0zmcvqJNgSg.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                /* background-color: palegoldenrod; */
+                position: absolute;
+                left: 300px;
+                bottom: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bg"></div>
+        <div class="bg center"></div>
+        <div class="bg"></div>
+        <div class="fixed"></div>
+        <div id="absolute"></div>
+    </body>
+</html>
