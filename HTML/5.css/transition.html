@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .square {
+                width: 100px;
+                height: 100px;
+                background-color: palevioletred;
+                transition-property: width, height;
+                transition-duration: 0.2s;
+                transition-timing-function: ease;
+                /* ease, linear, ease-in, ease-out, ease-in-out */
+            }
+            .square:hover {
+                width: 150px;
+                height: 150px;
+            }
+            .button {
+                color: black;
+                transition-property: color;
+                transition-duration: 1.0s;
+                transition-timing-function: ease-out;
+            }
+            .button:hover {
+                color: palevioletred;
+            }
+            .image {
+                width: 500px;
+                height: 300px;
+                transition-property: background-image;
+                transition-duration: 2.0s;
+                transition-timing-function: ease-in-out;
+            }
+            .image:hover {
+                transform: rotate(100deg);
+            }
+            .gradient {
+                background: linear-gradient(to right, palevioletred, powderblue);
+                transition: color;
+                transition-duration: 2.0s;
+                transition-timing-function: ease-in;
+            }
+            .gradient:hover {
+                background-image: linear-gradient(to right, plum, purple);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="square"></div> <br>
+        <button class="button">Hover me</button> <br>
+        <img src="/images/dog1.jpg" class="image" alt="강아지 이미지">
+        <div class="gradient">Hover me for gradient effect</div>
+    </body>
+</html>
