@@ -1,0 +1,20 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid gainsboro;
+    padding: 8px;
+    text-align: left;
+
+}
+thead tr {
+    background-color: pink;
+}
+button {
+    width: 50px;
+    height: 24px;
+    border-radius: 5px;
+    border: none;
+    background-color: palevioletred;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>캔바스5</title>
+    <style>
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="textCanvas" width="400" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById('textCanvas');
+        const context = canvas.getContext('2d');
+
+        const ball = {
+            x: 50,
+            y: 50,
+            radius: 20,
+            dx: 3,
+            dy: 2, // 초기 속도
+        }
+
+        function drewBall() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            context.beginPath();
+            context.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+            context.fillStyle = 'pink';
+            context.fill();
+            context.closePath();
+
+            // 공을 이동 시키기
+            ball.x += ball.dx;
+            ball.y += ball.dy;
+
+            // 가로벽에 부딪혔을 때
+            if (ball.x + ball.radius > canvas.width || ball.x + ball.radius < 0) {
+                ball.dx = -ball.dx;
+            }
+
+            // 새로벽에 부딪혔을 때
+            if (ball.y > canvas.width || ball.y < 0) {
+                ball.dy = -ball.dy;
+            }
+
+            requestAnimationFrame(drewBall);
+        }
+        drewBall();
+    </script>
+</body>
+</html>

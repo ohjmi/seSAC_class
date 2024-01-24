@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>이메일 인증 코드</title>
+</head>
+
+<body>
+    <h1>회원가입</h1>
+    <div id="send">
+        <form>
+            <label>이메일:</label>
+            <input id="mailInput" type="text">
+            <button type="button" onclick="sendEmail()">인증코드발송</button>
+        </form>
+    </div>
+    <div id="check" style="display: none;">
+        <form>
+            <div>이메일로 인증코드가 발송되었습니다.</div>
+            <input id="codeInput" type="text">
+            <button type="button" onclick="codeCheck()">인증코드확인</button>
+            <div id="codeSucess" style="display: none;">회원가입이 완료되었습니다.</div>
+            <div id="codeFail" style="display: none;">인증번호가 일치하지 않습니다.</div>
+        </form>
+    </div>
+    <script>
+        function sendEmail() {
+            showCheck(); // 성공
+            const mailValue = document.getElementById('mailInput').value;
+            console.log(mailValue)
+            fetch((`/login/${mailValue}`), {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+
+            })
+                .then(response => {
+                    if (response.status === 200) {
+                        return response.json();
+
+                    } else {
+                        throw new Error('인증 실패')
+                    }
+                })
+                .then(data => {
+
+                }).catch(error => {
+                    console.log('인증 실패:', error);
+
+                })
+        }
+        function codeCheck() {
+            const codeValue = document.getElementById('codeInput').value;
+
+            fetch(`/check-login/${codeValue}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('서버 응답 오류');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                    document.getElementById('codeSucess').style.display = 'block';
+                })
+                .catch(error => {
+                    console.error('로그인 상태 확인 오류:', error);
+                    document.getElementById('codeFail').style.display = 'block';
+                });
+        }
+
+
+        function showCheck() {
+            document.getElementById('check').style.display = 'block';
+            document.getElementById('send').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

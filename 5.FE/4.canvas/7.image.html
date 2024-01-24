@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>캔바스7</title>
+    <style>
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="textCanvas" width="400" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById('textCanvas');
+        const context = canvas.getContext('2d');
+
+        const image1 = new Image();
+        image1.src = 'rocket1.png'; // 이미지 경로
+        image1.onload = function() {
+            // context.drawImage(image, 0, 0, canvas.width, canvas.height);
+            context.drawImage(image1, 100, 100, 100);
+        }
+
+        const image2 = new Image();
+        image2.src = 'rocket1.png'; // 이미지 경로
+        image2.onload = function() {
+            // context.drawImage(image, 0, 0, canvas.width, canvas.height);
+            context.drawImage(image2, 200, 300, 100, 100);
+        }
+    </script>
+</body>
+</html>

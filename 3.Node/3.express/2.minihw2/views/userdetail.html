@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>User Detail</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid gainsboro;
+            padding: 20px 10px;
+        }
+        th {
+            background-color: pink;
+        }
+        p {
+            text-align: center;
+            margin-top: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: palevioletred;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Detail</h1>
+        <table>
+            <!-- <tr>
+                <th>{{ headers }}</th>
+            </tr> -->
+            <tr>
+                {% for header in headers %}
+                        <th>{{ header }}</th>
+                {% endfor %}
+            </tr>
+            <tr>
+                <td>{{user.Id}}</td>
+                <td>{{user.Name}}</td>
+                <td>{{user.Gender}}</td>
+                <td>{{user.Age}}</td>
+                <td>{{user.Birthdate}}</td>
+                <td>{{user.Address}}</td>
+            </tr>
+        </table>
+        <p><a href="/">사용자 목록으로 돌아가기</a></p>
+</body>
+</html>
